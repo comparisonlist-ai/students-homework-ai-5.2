@@ -1,1 +1,166 @@
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="theme-color"
+        content="#2563eb">
+
+    <title>
+        Students Homework AI
+        | Class 6–10
+    </title>
+
+    <meta
+        name="description"
+        content="Students Homework AI helps CBSE Class 6–10 students solve homework, understand concepts and prepare for exams.">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+</head>
+
+<body>
+
+    <div id="app">
+
+        <!-- ========================= -->
+        <!-- HEADER -->
+        <!-- ========================= -->
+
+        <header class="app-header">
+
+            <h1>
+                Students Homework AI
+            </h1>
+
+            <p>
+                Class 6–10 Homework Help
+            </p>
+
+        </header>
+
+        <!-- ========================= -->
+        <!-- WELCOME SCREEN -->
+        <!-- ========================= -->
+
+        <section
+            id="welcomeScreen"
+            class="screen active">
+
+            <div class="card">
+
+                <h2>
+                    Welcome
+                </h2>
+
+                <p>
+                    Solve homework with AI,
+                    understand concepts and
+                    prepare for exams.
+                </p>
+
+                <button
+                    id="startTrialBtn"
+                    onclick="showRegistration()">
+
+                    Start Your
+                    7-Day Free Trial
+
+                </button>
+
+                <button
+                    id="loginBtn"
+                    onclick="showLogin()">
+
+                    Student Login
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- REGISTRATION SCREEN -->
+        <!-- ========================= -->
+
+        <section
+            id="registrationScreen"
+            class="screen">
+
+            <div class="card">
+
+                <h2>
+                    Student Registration
+                </h2>
+
+                <form
+                    id="registrationForm"
+                    onsubmit="registerStudent(); return false;">
+
+                    <label>
+                        Student Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="studentName"
+                        placeholder="Enter student name"
+                        required>
+
+                    <label>
+                        Class
+                    </label>
+
+                    <select
+                        id="studentClass"
+                        required>
+
+                        <option value="">
+                            Select Class
+                        </option>
+
+                        <option>
+                            Class 6
+                        </option>
+
+                        <option>
+                            Class 7
+                        </option>
+
+                        <option>
+                            Class 8
+                        </option>
+
+                        <option>
+                            Class 9
+                        </option>
+
+                        <option>
+                            Class 10
+                        </option>
+
+                    </select>
