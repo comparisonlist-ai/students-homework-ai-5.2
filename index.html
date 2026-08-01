@@ -162,5 +162,315 @@
                         <option>
                             Class 10
                         </option>
+                    <label>
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="studentMobile"
+                        placeholder="10-digit mobile number"
+                        maxlength="10"
+                        required>
+
+                    <label>
+                        Parent Mobile
+                        (Optional)
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="parentMobile"
+                        placeholder="Parent mobile number"
+                        maxlength="10">
+
+                    <label>
+                        Email Address
+                    </label>
+
+                    <input
+                        type="email"
+                        id="studentEmail"
+                        placeholder="Enter email address"
+                        required>
+
+                    <button
+                        type="submit"
+                        id="registerButton">
+
+                        Register &
+                        Start Free Trial
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        onclick="showWelcome()">
+
+                        Back
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- LOGIN SCREEN -->
+        <!-- ========================= -->
+
+        <section
+            id="loginScreen"
+            class="screen">
+
+            <div class="card">
+
+                <h2>
+                    Student Login
+                </h2>
+
+                <form
+                    id="loginForm"
+                    onsubmit="loginStudent(); return false;">
+
+                    <label>
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="loginMobile"
+                        placeholder="Registered mobile number"
+                        maxlength="10"
+                        required>
+
+                    <button
+                        type="submit">
+
+                        Login
+
+                    </button>
+
+                    <button
+                        type="button"
+                        class="secondary-btn"
+                        onclick="showWelcome()">
+
+                        Back
+
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+                <!-- ========================= -->
+        <!-- DASHBOARD SCREEN -->
+        <!-- ========================= -->
+
+        <section
+            id="dashboardScreen"
+            class="screen">
+
+            <div class="card">
+
+                <h2>
+                    Welcome,
+                    <span id="studentDisplayName">
+                        Student
+                    </span>
+                </h2>
+
+                <p>
+                    Select your class to continue.
+                </p>
+
+                <div
+                    id="classButtons"
+                    class="grid-buttons">
+
+                    <button
+                        onclick="showSubject('Class 6')">
+                        Class 6
+                    </button>
+
+                    <button
+                        onclick="showSubject('Class 7')">
+                        Class 7
+                    </button>
+
+                    <button
+                        onclick="showSubject('Class 8')">
+                        Class 8
+                    </button>
+
+                    <button
+                        onclick="showSubject('Class 9')">
+                        Class 9
+                    </button>
+
+                    <button
+                        onclick="showSubject('Class 10')">
+                        Class 10
+                    </button>
+
+                </div>
+
+                <button
+                    class="secondary-btn"
+                    onclick="logoutStudent()">
+
+                    Logout
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- ========================= -->
+        <!-- SUBJECT SCREEN -->
+        <!-- ========================= -->
+
+        <section
+            id="subjectScreen"
+            class="screen">
+
+            <div class="card">
+
+                <h2
+                    id="selectedClassTitle">
+
+                    Class
+
+                </h2>
+
+                <div
+                    class="grid-buttons">
+
+                    <button
+                        onclick="selectSubject('Mathematics')">
+
+                        Mathematics
+
+                    </button>
+
+                    <button
+                        onclick="selectSubject('Science')">
+
+                        Science
+
+                    </button>
+
+                    <button
+                        onclick="selectSubject('English')">
+
+                        English
+
+                    </button>
+
+                    <button
+                        onclick="selectSubject('Social Science')">
+
+                        Social Science
+
+                    </button>
+
+                </div>
+
+                <button
+                    class="secondary-btn"
+                    onclick="showDashboard()">
+
+                    Back
+
+                </button>
+
+            </div>
+
+        </section>
+        <!-- ========================= -->
+        <!-- AI HOMEWORK SCREEN -->
+        <!-- ========================= -->
+
+        <section
+            id="aiScreen"
+            class="screen">
+
+            <div class="card">
+
+                <h2>
+                    Students Homework AI
+                </h2>
+
+                <p id="selectedSubject">
+                    Subject
+                </p>
+
+                <textarea
+                    id="questionInput"
+                    rows="6"
+                    placeholder="Type your homework question here..."></textarea>
+
+                <button
+                    onclick="askAI()">
+
+                    Get AI Answer
+
+                </button>
+
+                <button
+                    class="secondary-btn"
+                    onclick="showSubject()">
+
+                    Back
+
+                </button>
+
+                <div
+                    id="loadingBox"
+                    class="loading"
+                    style="display:none;">
+
+                    AI is thinking...
+
+                </div>
+
+                <div
+                    id="answerBox"
+                    class="answer-box">
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- ========================= -->
+    <!-- SUPABASE -->
+    <!-- ========================= -->
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+    <script src="supabase.js"></script>
+
+    <!-- ========================= -->
+    <!-- APPLICATION -->
+    <!-- ========================= -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+        
+                        
 
                     </select>
